@@ -1,0 +1,110 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background-color: lightgrey;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-flow: column;
+
+  position: fixed;
+  z-index: 50;
+
+  background-color: white;
+  border-radius: 1rem;
+
+  padding: 1rem;
+  margin: 1rem;
+
+  opacity: 0.5;
+  line-height: 0;
+  transition-duration: 1s;
+}
+
+.nav-row {
+  display: flex;
+  gap: 0.25rem;
+}
+
+nav:hover {
+  opacity: 1;
+}
+
+button {
+  color: white;
+  background-color: grey;
+  border-radius: 0.2rem;
+  border: 0px;
+  cursor: pointer;
+}
+
+form button {
+  height: 100%;
+}
+
+.image-holder {
+  column-count: 4;
+  column-gap: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+
+.image-holder > div {
+  animation: ease fadeIn 2s;
+
+  padding: 0.5rem 0rem;
+}
+
+.image-holder img {
+  width: 100%;
+  transition-duration: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.delete-button {
+  position: absolute;
+  padding: 1rem;
+  margin: 1rem;
+
+  border-radius: 50%;
+  background-color: grey;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+
+  opacity: 0;
+
+  z-index: 20;
+  /* right: 0; */
+}
+
+.delete-button:hover {
+  opacity: 1 !important;
+}
+
+.image-container:hover .delete-button {
+  opacity: 0.5;
+}
+
+.delete-button > div {
+  height: 8px;
+  width: 8px;
+}

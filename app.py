@@ -38,8 +38,13 @@ def get_favorites(username, last_id = None):
   max_iterations = 1
 
   while len(images) < min_images and count < max_iterations:
-    count+= 1
-    posts = api.get_favorites(screen_name=username, count=20, include_entities=True, tweet_mode="extended", max_id=last_max_id)
+    count += 1
+
+    try:
+      posts = api.get_favorites(screen_name=username, count=20, include_entities=True, tweet_mode="extended", max_id=last_max_id)
+    except NameError:
+      return NameError
+
     for post in posts:
       last_max_id = post.id
       try:
@@ -61,6 +66,7 @@ def get(username, last_id = None):
   response = jsonify(data)
   response.headers.add('Access-Control-Allow-Origin', '*')
   return response
+    
 
 @app.route("/")
 def home():

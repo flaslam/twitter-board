@@ -38,12 +38,17 @@ const submitForm = async (e) => {
     // Process data to output images
     processData(data);
   } catch (err) {
-    // alert(err);
+    alert("Could not get data for this user. They may be set to private.");
     console.log(err);
   }
 };
 
 const processData = (data) => {
+  if (data.images.length <= 0) {
+    alert("No more images could be loaded for this user.");
+    return;
+  }
+
   addImages(data.images);
 
   // Store variables we need later.

@@ -23,7 +23,10 @@ api = tweepy.API(auth)
 # Initialise app
 app = Flask(__name__)
 
-# enable cors for dev
+# Config app
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+# Enable cors for dev
 CORS(app)
 
 # Get data from Twitter
@@ -65,5 +68,5 @@ def home():
 
 # Run server
 if __name__ == '__main__':
-  app.run()
-  # app.run(debug=True)
+  # app.run()
+  app.run(debug=True)

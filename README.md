@@ -13,14 +13,15 @@ Deployed live on Heroku [here](https://twitter-board-flaslam.herokuapp.com/).
 - Individual images can be deleted
 - Zoom in and out to scale the canvas
 
-###Technologies used:
+### Technologies used:
 
 - Python
 - Flask
 - JavaScript
 - HTML/CSS
 
-###Running the app locally
+### Running the app locally
+
 After cloning the repo, install dependencies from the pipfile:
 `pipenv install`
 

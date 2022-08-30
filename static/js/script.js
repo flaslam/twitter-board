@@ -19,14 +19,6 @@ let currColCount = 4;
 let user = null;
 let lastId = null;
 
-const changeSize = (amount) => {
-  if ((currColCount < 2 && amount < 0) || (currColCount > 6 && amount > 0))
-    return;
-
-  currColCount += amount;
-  imageHolder.style.columnCount = currColCount;
-};
-
 const submitForm = async (e) => {
   e.preventDefault();
 
@@ -46,7 +38,7 @@ const submitForm = async (e) => {
     // Process data to output images
     processData(data);
   } catch (err) {
-    alert(err);
+    // alert(err);
     console.log(err);
   }
 };
@@ -107,7 +99,7 @@ const loadMore = async () => {
   processData(data);
 };
 
-const shuffleImages = (e) => {
+const shuffleImages = () => {
   let imageArray = Array.prototype.slice.call(imageHolder.childNodes);
   console.log(imageArray);
   let newArr = shuffle(imageArray);
@@ -123,3 +115,11 @@ function shuffle(a) {
   }
   return a;
 }
+
+const changeSize = (amount) => {
+  if ((currColCount < 2 && amount < 0) || (currColCount > 6 && amount > 0))
+    return;
+
+  currColCount += amount;
+  imageHolder.style.columnCount = currColCount;
+};

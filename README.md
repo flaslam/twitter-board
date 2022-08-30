@@ -23,10 +23,19 @@ Deployed live on Heroku [here](https://twitter-board-flaslam.herokuapp.com/).
 ### Running the app locally
 
 After cloning the repo, install dependencies from the pipfile:
-`pipenv install`
+
+```
+pipenv install
+```
 
 Run the server
-`python app.py`
+
+```
+python app.py
+```
 
 Navigate to the server URL in your browser:
-`http://127.0.0.1:5000`
+
+```
+http://127.0.0.1:5000
+```

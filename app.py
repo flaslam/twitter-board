@@ -1,17 +1,17 @@
 from flask import Flask, jsonify, render_template
-import configparser
+from dotenv import load_dotenv
+import os
 import tweepy
 from flask_cors import CORS
 
-# Read configs
-config = configparser.ConfigParser()
-config.read('config.ini')
+# Read environment variables from .env
+load_dotenv()
 
-api_key = config['twitter']['api_key']
-api_key_secret = config['twitter']['api_key_secret']
+api_key = os.getenv("api_key")
+api_key_secret = os.getenv("api_key_secret")
 
-access_token = config['twitter']['access_token']
-access_token_secret = config['twitter']['access_token_secret']
+access_token = os.getenv("access_token")
+access_token_secret = os.getenv("access_token_secret")
 
 # Authenticate app with Twitter API
 auth = tweepy.OAuthHandler(api_key, api_key_secret)

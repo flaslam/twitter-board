@@ -4,7 +4,7 @@ Searches through a user's liked/favourited posts to scrape images and display th
 
 Deployed live on Heroku [here](https://twitter-board-flaslam.herokuapp.com/).
 
-###Features:
+### Features:
 
 - Integrated with Twitter API
 - Back-end made in Flask (Python)

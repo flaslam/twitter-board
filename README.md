@@ -2,7 +2,7 @@
 
 Searches through a user's liked/favourited posts to scrape images and display them on an endless canvas to the user. Back-end was made in Python with Flask and the front-end is vanilla JavaScript and HTML/CSS.
 
-Deployed live on Heroku [here](https://twitter-board-flaslam.herokuapp.com/).
+The app is deployed at the link in the About section. Note that the first launch may take some time as the server will likely be idling.
 
 ### Features:
 

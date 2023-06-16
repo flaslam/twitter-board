@@ -1,4 +1,6 @@
-## Twitter Mood Board
+# Twitter Mood Board
+
+### Please note: due to changes to the Twitter API, this app is now deprecated.
 
 Searches through a user's liked/favourited posts to scrape images and display them on an endless canvas to the user. Back-end was made in Python with Flask and the front-end is vanilla JavaScript and HTML/CSS.
 
